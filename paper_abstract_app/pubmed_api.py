@@ -10,14 +10,10 @@ from html.parser import HTMLParser
 import os
 from dotenv import load_dotenv
 
-# .env ファイルをロード
-load_dotenv()
 
 # 環境変数を読み取る
-deepl_key = os.getenv('DEEPL_API_KEY')
+deepl_key = 'f77736b7-ba86-5529-9588-6e98706f1776'
 
-if not deepl_key:
-    raise ValueError("Missing DEEPL_API_KEY in .env file")
 
 SOURCE_DB = 'pubmed'
 DATE_TYPE = 'pdat'  # Type of date used to limit a search. The allowed values vary between Entrez databases, but common values are 'mdat' (modification date), 'pdat' (publication date) and 'edat' (Entrez date). Generally an Entrez database will have only two allowed values for datetype.
